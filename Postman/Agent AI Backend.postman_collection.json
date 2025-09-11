@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "34ed9aa4-07aa-4373-a566-bd618b870d07",
+		"name": "Agent AI Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46276164",
+		"_collection_link": "https://banshidhartech-s-team.postman.co/workspace/BANSHIDHARTech's-Workspace~e8eac386-e2d4-4d00-8b48-d2f73d28e0b3/collection/46276164-34ed9aa4-07aa-4373-a566-bd618b870d07?action=share&source=collection_link&creator=46276164"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Agent",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"TestAgent\",\r\n  \"system_prompt\": \"This is a test agent\",\r\n  \"model_name\": \"gpt-4\",\r\n  \"input_intents\": [\"test_input\"],\r\n  \"output_intents\": [\"test_output\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/agents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"agents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tool",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test_tool\",\r\n  \"description\": \"Testing tool\",\r\n  \"function_code\": \"function test_tool() { return 'Hello Tool'; }\",\r\n  \"parameters\": {}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/tools",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Workflow",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test Flow\",\r\n  \"description\": \"Basic workflow test\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/workflows",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"workflows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Run Workflow",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"workflow_name\": \"Customer Service Workflow\",\r\n  \"input\": {\r\n    \"query\": \"I need to check my balance\",\r\n    \"user_id\": \"customer_123\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/workflows/run",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"workflows",
+						"run"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Logs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/logs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"logs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

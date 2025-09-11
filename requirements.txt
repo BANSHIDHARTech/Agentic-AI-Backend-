@@ -1,0 +1,48 @@
+# Core
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-dotenv==1.0.0
+
+# Database
+supabase==2.3.4  # Official Supabase Python client
+
+# Async HTTP
+httpx>=0.24.1,<0.25.0  # Compatible with supabase 2.0.0
+
+# Server-Sent Events
+sse-starlette==1.6.5  # Stable version with all required features
+
+# LangChain Ecosystem
+langchain>=0.1.0,<0.2.0  # Allow compatible versions
+langchain-openai>=0.0.1,<0.1.0  # Allow compatible versions
+langchain-anthropic>=0.1.0,<0.2.0  # Allow compatible versions
+langchain-cohere>=0.1.0,<0.2.0  # Allow compatible versions
+langsmith>=0.1.0,<0.2.0  # Allow compatible versions
+
+# Data Validation
+pydantic>=1.10.13,<2.0.0
+
+# File Processing
+python-multipart==0.0.6
+aiofiles==23.2.1
+PyPDF2==3.0.1
+beautifulsoup4==4.12.2  # For HTML parsing in knowledge service
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Scheduling
+apscheduler==3.10.4
+schedule==1.2.0
+
+# Utilities
+python-dateutil==2.8.2
+tenacity==8.2.3
+tqdm==4.66.1
+numpy==1.26.0
+pandas==2.1.1
+
+# Development
+pytest==7.4.2
+pytest-asyncio==0.21.1
